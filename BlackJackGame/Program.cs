@@ -7,27 +7,20 @@ namespace BlackJackGame
         private static void Main(string[] args)
         {
             // Create random playing cards for player and computer
-            Random hitcard1 = new Random();
-            int hitcardone = hitcard1.Next(4, 12);
-            Random hitcard2 = new Random();
-            int hitcardtwo = hitcard2.Next(1, 8);
-            Random hitcard3 = new Random();
-            int hitcardthree = hitcard3.Next(1, 10);
-            Random showncard2 = new Random();
-            int showncardsecond = showncard2.Next(1, 10);
-            Random staycard = new Random();
-            int staycard1 = staycard.Next(1, 12);
-            Random staycard2 = new Random();
-            int staycardtwo = staycard2.Next(1, 12);
+            Random hitcard1 = new Random(); int hitcardone = hitcard1.Next(4, 12);
+            Random hitcard2 = new Random(); int hitcardtwo = hitcard2.Next(1, 8);
+            Random hitcard3 = new Random(); int hitcardthree = hitcard3.Next(1, 10);
+            Random showncard2 = new Random(); int showncardsecond = showncard2.Next(1, 10);
+            Random staycard = new Random(); int staycard1 = staycard.Next(1, 12);
+            Random staycard2 = new Random(); int staycardtwo = staycard2.Next(1, 12);
             string user_name, user_choice, user_choice2;
 
             // Ask for player name, initialize game, ask for player choice
-            Console.WriteLine("Hello! Before we start playing, what's your name?");
-            user_name = Console.ReadLine();
-            Console.WriteLine("The rules are simple, " + user_name + ". The goal of BlackJack is to get as close to 21 without busting.");
+            Console.WriteLine("Welcome to BlackJack! Before we start playing, what's your name?"); user_name = Console.ReadLine();
+            Console.WriteLine("The rules are simple, " + user_name + ". The goal is to get as close to 21 without busting.");
             Random showncard = new Random();
             int showncard1 = showncard.Next(3, 7);
-            Console.WriteLine("Im holding " + showncard1 + ". My other card isn't revealed.");
+            Console.WriteLine("I'm holding " + showncard1 + ". My other card isn't revealed.");
             Random number = new Random();
             int num = number.Next(2, 6);
             Random number2 = new Random();
