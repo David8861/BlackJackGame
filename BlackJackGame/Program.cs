@@ -60,8 +60,8 @@ namespace BlackJackGame
             // If player stays, add cards until you win or computer wins
             if (user_choice == "Stay")
             {
-                Console.WriteLine("Other than " + showncard1 + ", my other card is " + showncardsecond + ".");
-                if (num + num2 >= 21)
+                Console.WriteLine("My other card is " + showncardsecond + ".");
+                if (num + num2 + hitcardone>= 21)
                 {
                     Console.WriteLine("You win, " + user_name + "!");
                 }
