@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BlackJackGame
 {
-    class BlackJack
+    internal class BlackJack
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            // Create random playing cards for player and computer
             Random hitcard1 = new Random();
             int hitcardone = hitcard1.Next(4, 12);
             Random hitcard2 = new Random();
@@ -24,6 +21,7 @@ namespace BlackJackGame
             int staycardtwo = staycard2.Next(1, 12);
             string user_name, user_choice, user_choice2;
 
+            // Ask for player name, initialize game, ask for player choice
             Console.WriteLine("Hello! Before we start playing, what's your name?");
             user_name = Console.ReadLine();
             Console.WriteLine("The rules are simple, " + user_name + ". The goal of BlackJack is to get as close to 21 without busting.");
@@ -37,7 +35,7 @@ namespace BlackJackGame
             Console.WriteLine("Your hand is " + num + " and " + num2 + ".");
             Console.WriteLine("Would you like to Hit or Stay?");
             user_choice = Console.ReadLine();
-
+            // If player hits, run hit and calculate for < or > than 21
             if (user_choice == "Hit")
             {
                 Console.WriteLine("Alright, " + user_name + ". Your next card is " + hitcardone + ".");
@@ -63,10 +61,10 @@ namespace BlackJackGame
                         {
                             Console.WriteLine("Bust!");
                         }
-
                     }
                 }
             }
+            // If player stays, add cards until you win or computer wins
             if (user_choice == "Stay")
             {
                 Console.WriteLine("Other than " + showncard1 + ", my other card is " + showncardsecond + ".");
