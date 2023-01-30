@@ -22,7 +22,7 @@ namespace BlackJackGame
             int showncard1 = showncard.Next(3, 13);
             Console.WriteLine("I'm holding " + showncard1 + ". My other card isn't revealed.");
             Random number = new Random();
-            int num = number.Next(2, 13);
+            int num = number.Next(2, 8);
             Random number2 = new Random();
             int num2 = number2.Next(2, 13);
             Console.WriteLine("Your hand is " + num + " and " + num2 + ".");
